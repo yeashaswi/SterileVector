@@ -1,8 +1,9 @@
 """
-STERILE VECTOR: 1D-CNN GESTURE RECOGNITION & QUANTIZATION PIPELINE
+STERILE VECTOR: 1D-CNN GESTURE RECOGNITION & QUANTIZATION DEMO
 Target: ESP32-C3 / TFLite Micro / ESP-DL
-Parameters: ~14,500 | Model Size: 15 KB (INT8 Quantized) | Inference: <4ms
-Dataset: 5 Participants x 100 reps + 30 Mins Continuous Surgical Negatives
+Model Size: ~15 KB (INT8 Quantized) | Architecture: 1D-CNN Prototype
+Note: Prototype architecture demonstration. For actual training, replace synthetic 
+generator with recorded IMU gesture data.
 """
 
 import numpy as np

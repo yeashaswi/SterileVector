@@ -1,9 +1,8 @@
 /*
  * STERILE VECTOR - ARIES v3.0 RISC-V SAFETY SUPERVISOR
  * Target: ARIES v3.0 Embedded Platform (VEGA ET1031 RISC-V SoC)
- * Function: Hardware Air-Gapped Firewall & Display Failsafe Governor
- * Standards: IEC 62304 Class B Medical Device Software Safety
- * Watchdog Trip Limit: < 200 ms to display freeze on fault
+ * Function: Experimental Watchdog Timer & Failsafe Governor
+ * Note: Benchtop demonstration for packet timeout detection (< 200 ms)
  */
 
 #include <stdio.h>

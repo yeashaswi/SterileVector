@@ -4,16 +4,16 @@
 
 ### 1. Bill of Materials (BOM) & Parts List (Total: ₹2,409)
 
-| Item | Component | Quantity | Unit Cost (₹) | Total Cost (₹) | Clinical & Electrical Role |
+| Item | Component | Quantity | Unit Cost (₹) | Total Cost (₹) | Prototype Role |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | ESP32-C3 SuperMini MCU | 2 | ₹250 | ₹500 | Wristband Edge AI MCU + Base Station Receiver |
-| **02** | MPU-6050 6-Axis IMU Breakout | 1 | ₹150 | ₹150 | ±4g Accel, ±500°/s Gyro @ 100 Hz I2C sampling |
-| **03** | Lithium Polymer Battery (3.7V, 500 mAh) | 1 | ₹200 | ₹200 | Ultra-slim pouch cell (13 hrs continuous active) |
-| **04** | TP4056 Type-C Charger + ME6211 LDO | 1 | ₹90 | ₹90 | USB-C charging + ultra-low-dropout 3.3V rail |
-| **05** | Custom 2-Layer PCB + 3D Enclosure | 1 | ₹800 | ₹800 | SLA medical-grade resin case + IP67 silicone seal |
-| **06** | 10mm Coin Haptic Motor + Medical Strap | 1 | ₹450 | ₹450 | Volar tactile driver + autoclavable silicone strap |
-| **07** | Passive Passives & Contingency (10%) | — | — | ₹219 | SMD resistors, ceramic bypass capacitors, flux |
-| **TOTAL** | **Complete Wearable Edge Hardware** | — | — | **₹2,409** | **Complies with &lt; ₹3,000 cost budget** |
+| **01** | ESP32-C3 SuperMini MCU | 2 | ₹250 | ₹500 | Wristband Sender MCU + Base Station Receiver |
+| **02** | MPU-6050 6-Axis IMU Breakout | 1 | ₹150 | ₹150 | Accel & Gyro @ 100 Hz I2C sampling |
+| **03** | Lithium Polymer Battery (3.7V, 500 mAh) | 1 | ₹200 | ₹200 | Compact pouch cell for portable testing |
+| **04** | TP4056 Type-C Charger + ME6211 LDO | 1 | ₹90 | ₹90 | USB-C charging + 3.3V power regulation |
+| **05** | Prototype PCB / Perfboard & 3D Case | 1 | ₹800 | ₹800 | Prototype mounting plate & 3D printed enclosure |
+| **06** | 10mm Coin Haptic Motor + Wrist Strap | 1 | ₹450 | ₹450 | Vibration haptic driver + basic wrist strap |
+| **07** | Passives & Wiring Contingency | — | — | ₹219 | SMD resistors, capacitors, hookup wire |
+| **TOTAL** | **Estimated Prototype Hardware Cost** | — | — | **~₹2,400** | **Low-cost DIY hardware bill** |
 
 ---
 
