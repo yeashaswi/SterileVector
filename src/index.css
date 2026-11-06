@@ -2,15 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+  --bg: #18181A;
+  --side: #1E1E21;
+  --panel: #232326;
+  --raised: #2C2C30;
+  --line: #36363B;
+  --line-soft: #2A2A2E;
+  --dim: #85858D;
+  --text: #BFBFC5;
+  --hi: #F4F4F6;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --sans: "Figtree", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+
 @layer base {
   * {
-    border-color: #23232B;
+    border-color: #36363B;
   }
   
   body {
-    background-color: #080809;
-    color: #F4F4F8;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--serif);
   }
 
   code, pre, .font-mono {
@@ -18,51 +40,26 @@
   }
 }
 
-/* Custom Scrollbars */
+/* Custom subtle scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0F0F12;
+  background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2E2E38;
+  background: var(--line);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #EB0028;
+  background: #4E4E56;
 }
 
-/* Surgical Grid Canvas */
+/* Subtle grid */
 .surgical-grid {
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 32px 32px;
-}
-
-.surgical-radar {
-  background: radial-gradient(circle, rgba(235, 0, 40, 0.08) 0%, rgba(8, 8, 9, 0) 70%);
-}
-
-/* Glow effects */
-.glow-opred {
-  box-shadow: 0 0 24px -2px rgba(235, 0, 40, 0.4);
-}
-
-.glow-subtle {
-  box-shadow: 0 0 16px -1px rgba(235, 0, 40, 0.15);
-}
-
-/* Scanline for DICOM viewer */
-.scanline {
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0),
-    rgba(255,255,255,0) 50%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.3)
-  );
-  background-size: 100% 4px;
 }

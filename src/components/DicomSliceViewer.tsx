@@ -93,7 +93,7 @@ export const DicomSliceViewer: React.FC<DicomSliceViewerProps> = ({
       ctx.beginPath();
       ctx.moveTo(cx, cy - skullRadiusY + 14);
       ctx.lineTo(cx, cy + skullRadiusY - 14);
-      ctx.strokeStyle = '#141418';
+      ctx.strokeStyle = '#232326';
       ctx.lineWidth = 2.5;
       ctx.stroke();
 
@@ -120,7 +120,7 @@ export const DicomSliceViewer: React.FC<DicomSliceViewerProps> = ({
       if (zNorm >= 0.25 && zNorm <= 0.48) {
         // High-density contrast in vessels (Circle of Willis)
         const isAngio = preset.name.includes('Angiography');
-        ctx.fillStyle = isAngio ? '#EB0028' : '#e2e2ea';
+        ctx.fillStyle = isAngio ? '#E05656' : '#e2e2ea';
 
         // Basilar artery dot
         ctx.beginPath();
@@ -197,7 +197,7 @@ export const DicomSliceViewer: React.FC<DicomSliceViewerProps> = ({
       ctx.setLineDash([]);
 
       // Pathology Callout
-      ctx.fillStyle = '#EB0028';
+      ctx.fillStyle = '#E05656';
       ctx.font = 'bold 11px "JetBrains Mono", monospace';
       ctx.fillText('TARGET: ICA ANEURYSM (3.4mm)', cx + 64, cy + 14);
     }
@@ -230,9 +230,9 @@ export const DicomSliceViewer: React.FC<DicomSliceViewerProps> = ({
   };
 
   return (
-    <div className="relative w-full h-[calc(100vh-140px)] min-h-[580px] bg-[#0A0A0C] rounded-2xl border border-[#23232B] overflow-hidden flex flex-col shadow-2xl">
+    <div className="relative w-full h-[calc(100vh-140px)] min-h-[580px] bg-[#18181A] rounded-2xl border border-[#36363B] overflow-hidden flex flex-col shadow-2xl">
       {/* Top DICOM Metadata Bar */}
-      <div className="bg-[#101014] px-5 py-3 border-b border-[#23232B] flex flex-wrap items-center justify-between gap-3 z-10">
+      <div className="bg-[#101014] px-5 py-3 border-b border-[#36363B] flex flex-wrap items-center justify-between gap-3 z-10">
         <div className="flex items-center gap-3">
           <div className="p-2 rounded-lg bg-opred/10 border border-opred/40 text-opred">
             <Scan className="w-4 h-4" />
@@ -303,7 +303,7 @@ export const DicomSliceViewer: React.FC<DicomSliceViewerProps> = ({
 
         {/* Live HU Probe Floater */}
         {probeHu && (
-          <div className="absolute top-4 left-4 bg-[#121216]/90 backdrop-blur-md px-3 py-2 rounded-xl border border-[#2B2B38] font-mono text-xs shadow-xl space-y-0.5">
+          <div className="absolute top-4 left-4 bg-[#1E1E21]/90 backdrop-blur-md px-3 py-2 rounded-xl border border-[#2B2B38] font-mono text-xs shadow-xl space-y-0.5">
             <div className="text-[10px] text-slate-400 uppercase">Hounsfield Unit (HU) Probe</div>
             <div className="text-sm font-bold text-white flex items-center gap-2">
               <span className={probeHu.hu > 150 ? 'text-opred' : 'text-emerald-400'}>
@@ -320,7 +320,7 @@ export const DicomSliceViewer: React.FC<DicomSliceViewerProps> = ({
         )}
 
         {/* Current Window Level/Width Readout */}
-        <div className="absolute top-4 right-4 bg-[#121216]/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-[#2B2B38] font-mono text-xs space-y-1">
+        <div className="absolute top-4 right-4 bg-[#1E1E21]/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-[#2B2B38] font-mono text-xs space-y-1">
           <div className="text-[10px] text-slate-400 uppercase">Window Contrast</div>
           <div className="text-white font-semibold">
             WL: <span className="text-opred">{PRESETS[selectedPresetIndex].wl}</span> | WW:{' '}
@@ -334,7 +334,7 @@ export const DicomSliceViewer: React.FC<DicomSliceViewerProps> = ({
         {/* Lock Shield Overlay if system is locked */}
         {telemetry.systemState === 'LOCKED' && (
           <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px] z-30 flex items-center justify-center pointer-events-none">
-            <div className="bg-[#121218]/95 border border-[#2E2E38] rounded-2xl p-6 max-w-md text-center shadow-2xl space-y-2">
+            <div className="bg-[#121218]/95 border border-[#36363B] rounded-2xl p-6 max-w-md text-center shadow-2xl space-y-2">
               <Lock className="w-8 h-8 text-slate-400 mx-auto" />
               <h3 className="text-sm font-bold text-white tracking-wide uppercase font-mono">
                 DICOM Slice Navigation Locked
@@ -348,7 +348,7 @@ export const DicomSliceViewer: React.FC<DicomSliceViewerProps> = ({
       </div>
 
       {/* Bottom Scrubber & Gesture Bar */}
-      <div className="bg-[#101014] px-5 py-3 border-t border-[#23232B] flex flex-wrap items-center justify-between gap-4 z-10">
+      <div className="bg-[#101014] px-5 py-3 border-t border-[#36363B] flex flex-wrap items-center justify-between gap-4 z-10">
         <div className="flex-1 max-w-xl flex items-center gap-3">
           <span className="text-xs font-mono text-slate-400 whitespace-nowrap">Axial Scrubber:</span>
           <input

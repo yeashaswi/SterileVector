@@ -279,7 +279,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#080809] text-white flex flex-col selection:bg-opred selection:text-white">
+    <div className="min-h-screen bg-[#18181A] text-white flex flex-col selection:bg-opred selection:text-white">
       {/* Top Operating Theatre Navigation & Status Bar */}
       <Navbar
         activeTab={activeTab}

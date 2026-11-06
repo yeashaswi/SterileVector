@@ -3,12 +3,10 @@ import {
   ShieldCheck, 
   Activity, 
   Layers, 
-  Cpu, 
   FileCode2, 
   BookOpen, 
   Usb, 
   Battery, 
-  BatteryCharging, 
   Lock, 
   Unlock, 
   AlertTriangle,
@@ -46,59 +44,59 @@ export const Navbar: React.FC<NavbarProps> = ({
   const getStateColor = (state: SystemState) => {
     switch (state) {
       case 'ACTIVE':
-        return 'bg-opred/20 text-opred border-opred/60 animate-pulse';
+        return 'bg-[#5BA887]/15 text-[#5BA887] border-[#5BA887]/30';
       case 'LOCKED':
-        return 'bg-slate-800 text-slate-300 border-slate-700';
+        return 'bg-[#232326] text-[#85858D] border-[#36363B]';
       case 'PAUSED':
-        return 'bg-amber-500/20 text-amber-400 border-amber-500/50';
+        return 'bg-amber-500/15 text-amber-300 border-amber-500/30';
       case 'FAULT':
-        return 'bg-red-950 text-red-500 border-red-600 animate-pulse';
+        return 'bg-[#E05656]/15 text-[#E05656] border-[#E05656]/40';
     }
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0A0A0C]/90 backdrop-blur-md border-b border-[#23232B] px-4 lg:px-6 py-2.5 transition-all">
+    <header className="sticky top-0 z-50 bg-[#18181A]/85 backdrop-blur-md border-b border-[#2A2A2E] px-4 lg:px-6 py-2.5 transition-all">
       <div className="max-w-[1920px] mx-auto flex flex-wrap items-center justify-between gap-y-3">
-        {/* Brand & Clinical Tag */}
+        {/* Brand & Prototype Tag */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-[#141418] border border-opred flex items-center justify-center shadow-lg shadow-opred/20">
-            <span className="w-2.5 h-2.5 rounded-full bg-opred animate-pulse"></span>
+          <div className="w-8 h-8 rounded-lg bg-[#232326] border border-[#36363B] flex items-center justify-center shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-[#E05656]"></span>
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-base font-bold tracking-wider text-white uppercase font-sans">
-                STERILE <span className="text-opred">VECTOR</span>
+              <h1 className="text-base font-serif font-medium tracking-tight text-[#F4F4F6]">
+                SterileVector
               </h1>
-              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#18181D] text-slate-400 border border-[#2A2A35]">
-                v3.0.4-CLINICAL
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#232326] text-[#85858D] border border-[#36363B]">
+                Prototype
               </span>
             </div>
-            <p className="text-[11px] text-slate-400 hidden sm:block">
-              Touchless Forearm Gesture Interface · ARIES v3.0 RISC-V Supervisor
+            <p className="text-[11px] text-[#85858D] hidden sm:block">
+              Touchless 3D scan navigation via wearable IMU
             </p>
           </div>
         </div>
 
-        {/* Central Navigation Pills */}
-        <nav className="flex items-center gap-1 bg-[#121216] p-1 rounded-xl border border-[#23232B]">
+        {/* Central Navigation Tabs */}
+        <nav className="flex items-center gap-1 bg-[#1E1E21] p-1 rounded-xl border border-[#2A2A2E]">
           <button
             onClick={() => setActiveTab('viewport')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
               activeTab === 'viewport'
-                ? 'bg-opred text-white shadow-md shadow-opred/30'
-                : 'text-slate-400 hover:text-white hover:bg-[#1A1A22]'
+                ? 'bg-[#2C2C30] text-[#F4F4F6] border border-[#36363B] shadow-sm'
+                : 'text-[#85858D] hover:text-[#F4F4F6] hover:bg-[#232326]'
             }`}
           >
             <Activity className="w-3.5 h-3.5" />
-            <span>OR Viewport</span>
+            <span>3D Viewport</span>
           </button>
 
           <button
             onClick={() => setActiveTab('telemetry')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
               activeTab === 'telemetry'
-                ? 'bg-opred text-white shadow-md shadow-opred/30'
-                : 'text-slate-400 hover:text-white hover:bg-[#1A1A22]'
+                ? 'bg-[#2C2C30] text-[#F4F4F6] border border-[#36363B] shadow-sm'
+                : 'text-[#85858D] hover:text-[#F4F4F6] hover:bg-[#232326]'
             }`}
           >
             <Layers className="w-3.5 h-3.5" />
@@ -109,32 +107,32 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => setActiveTab('safety')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
               activeTab === 'safety'
-                ? 'bg-opred text-white shadow-md shadow-opred/30'
-                : 'text-slate-400 hover:text-white hover:bg-[#1A1A22]'
+                ? 'bg-[#2C2C30] text-[#F4F4F6] border border-[#36363B] shadow-sm'
+                : 'text-[#85858D] hover:text-[#F4F4F6] hover:bg-[#232326]'
             }`}
           >
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>ARIES Safety</span>
+            <span>Watchdog</span>
           </button>
 
           <button
             onClick={() => setActiveTab('code')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
               activeTab === 'code'
-                ? 'bg-opred text-white shadow-md shadow-opred/30'
-                : 'text-slate-400 hover:text-white hover:bg-[#1A1A22]'
+                ? 'bg-[#2C2C30] text-[#F4F4F6] border border-[#36363B] shadow-sm'
+                : 'text-[#85858D] hover:text-[#F4F4F6] hover:bg-[#232326]'
             }`}
           >
             <FileCode2 className="w-3.5 h-3.5" />
-            <span>Firmware Repo</span>
+            <span>Firmware</span>
           </button>
 
           <button
             onClick={() => setActiveTab('guide')}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
               activeTab === 'guide'
-                ? 'bg-opred text-white shadow-md shadow-opred/30'
-                : 'text-slate-400 hover:text-white hover:bg-[#1A1A22]'
+                ? 'bg-[#2C2C30] text-[#F4F4F6] border border-[#36363B] shadow-sm'
+                : 'text-[#85858D] hover:text-[#F4F4F6] hover:bg-[#232326]'
             }`}
           >
             <BookOpen className="w-3.5 h-3.5" />
@@ -143,18 +141,18 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Right Status Cluster */}
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2">
           {/* Quick Clutch Unlock/Lock Button */}
           <button
             onClick={onToggleState}
-            title="Surgeon Clutch Trigger (Simulates 2.0s Palm-up gesture)"
-            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg border text-xs font-mono font-semibold transition-all ${getStateColor(
+            title="Clutch Toggle (Simulates 2.0s Palm-up gesture)"
+            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg border text-xs font-mono font-medium transition-all ${getStateColor(
               systemState
             )}`}
           >
             {systemState === 'ACTIVE' ? (
               <>
-                <Unlock className="w-3.5 h-3.5 text-opred" />
+                <Unlock className="w-3.5 h-3.5 text-[#5BA887]" />
                 <span>ACTIVE</span>
               </>
             ) : systemState === 'LOCKED' ? (
@@ -170,15 +168,15 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </button>
 
-          {/* Mode Switch (Roll Flick shortcut) */}
+          {/* Mode Switch */}
           <button
             onClick={onToggleMode}
             title="Roll Flick Gesture Toggle"
-            className="hidden md:flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#15151A] hover:bg-[#202028] border border-[#2A2A35] text-xs font-mono text-slate-200 transition-colors"
+            className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#232326] hover:bg-[#2C2C30] border border-[#36363B] text-xs font-mono text-[#BFBFC5] transition-colors"
           >
-            <span className="text-[10px] text-slate-500">MODE:</span>
-            <span className="text-white font-semibold">
-              {displayMode === '3D_VOLUME' ? '3D CT/MRI' : '2D AXIAL'}
+            <span className="text-[10px] text-[#85858D]">MODE:</span>
+            <span className="text-[#F4F4F6] font-medium">
+              {displayMode === '3D_VOLUME' ? '3D Volume' : '2D Slices'}
             </span>
           </button>
 
@@ -186,39 +184,38 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             onClick={onResetOrigin}
             title="Reset Spatial Origin (Zero-Point)"
-            className="p-1.5 rounded-lg bg-[#15151A] hover:bg-[#202028] border border-[#2A2A35] text-slate-300 hover:text-white transition-colors"
+            className="p-1.5 rounded-lg bg-[#232326] hover:bg-[#2C2C30] border border-[#36363B] text-[#85858D] hover:text-[#F4F4F6] transition-colors"
           >
             <RotateCw className="w-3.5 h-3.5" />
           </button>
 
           {/* Watchdog Status */}
-          <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#15151A] border border-[#2A2A35] text-[11px] font-mono">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span className="text-slate-400">WDOG:</span>
-            <span className={watchdogLatencyMs > 150 ? 'text-opred font-bold' : 'text-slate-200'}>
-              {watchdogLatencyMs}ms / 200ms
+          <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#232326] border border-[#36363B] text-[11px] font-mono">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#5BA887]"></span>
+            <span className="text-[#85858D]">WDOG:</span>
+            <span className={watchdogLatencyMs > 150 ? 'text-[#E05656] font-medium' : 'text-[#BFBFC5]'}>
+              {watchdogLatencyMs}ms
             </span>
           </div>
 
           {/* Battery Status */}
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#15151A] border border-[#2A2A35] text-[11px] font-mono">
-            <Battery className="w-3.5 h-3.5 text-emerald-400" />
-            <span className="text-slate-200">{batteryLevel}%</span>
-            <span className="text-slate-500 hidden xl:inline">(~12.8h)</span>
+          <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#232326] border border-[#36363B] text-[11px] font-mono">
+            <Battery className="w-3.5 h-3.5 text-[#85858D]" />
+            <span className="text-[#BFBFC5]">{batteryLevel}%</span>
           </div>
 
-          {/* Hardware Connect Web Serial Button */}
+          {/* Hardware Connect Modal Toggle */}
           <button
             onClick={onOpenHardwareModal}
             className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-mono border transition-all ${
               isConnectedHardware
-                ? 'bg-emerald-500/10 border-emerald-500/50 text-emerald-400'
-                : 'bg-[#15151A] hover:bg-[#202028] border-opred/40 text-slate-200 hover:border-opred'
+                ? 'bg-[#5BA887]/15 text-[#5BA887] border-[#5BA887]/30'
+                : 'bg-[#232326] hover:bg-[#2C2C30] border-[#36363B] text-[#BFBFC5] hover:text-[#F4F4F6]'
             }`}
           >
-            <Usb className={`w-3.5 h-3.5 ${isConnectedHardware ? 'text-emerald-400' : 'text-opred'}`} />
+            <Usb className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">
-              {isConnectedHardware ? 'ARIES USB OK' : 'Connect USB'}
+              {isConnectedHardware ? 'Serial Connected' : 'Connect HW'}
             </span>
           </button>
         </div>

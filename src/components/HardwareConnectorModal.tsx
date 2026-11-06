@@ -69,7 +69,7 @@ export const HardwareConnectorModal: React.FC<HardwareConnectorModalProps> = ({
 
         {/* Modal Body */}
         <div className="px-5 space-y-4 text-xs font-mono">
-          <div className="p-3 rounded-xl bg-[#0B0B0E] border border-[#23232B] space-y-2">
+          <div className="p-3 rounded-xl bg-[#0B0B0E] border border-[#36363B] space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-slate-400">Target Port:</span>
               <span className="text-white font-semibold">ARIES v3.0 / ESP32 Base Station</span>

@@ -41,7 +41,7 @@ export const SafetySupervisorView: React.FC<SafetySupervisorViewProps> = ({
   return (
     <div className="space-y-6">
       {/* Top Banner */}
-      <div className="bg-[#101014] p-5 rounded-2xl border border-[#23232B] flex flex-wrap items-center justify-between gap-4">
+      <div className="bg-[#101014] p-5 rounded-2xl border border-[#36363B] flex flex-wrap items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-5 h-5 text-opred" />
@@ -67,7 +67,7 @@ export const SafetySupervisorView: React.FC<SafetySupervisorViewProps> = ({
       </div>
 
       {/* Hardware Safety Pipeline Flowchart */}
-      <div className="bg-[#121216] p-6 rounded-2xl border border-[#23232B] space-y-4">
+      <div className="bg-[#1E1E21] p-6 rounded-2xl border border-[#36363B] space-y-4">
         <h3 className="text-xs font-mono text-slate-400 uppercase tracking-wider font-semibold">
           Isolated Hardware Security Boundary (Air-Gapped critical path)
         </h3>
@@ -140,7 +140,7 @@ export const SafetySupervisorView: React.FC<SafetySupervisorViewProps> = ({
       {/* Safety Supervisor Metrics Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {/* Watchdog Timer Status */}
-        <div className="bg-[#121216] p-4 rounded-xl border border-[#23232B] space-y-1">
+        <div className="bg-[#1E1E21] p-4 rounded-xl border border-[#36363B] space-y-1">
           <div className="flex items-center justify-between text-slate-400 text-xs font-mono">
             <span>WATCHDOG TIMER</span>
             <Clock className="w-4 h-4 text-emerald-400" />
@@ -154,7 +154,7 @@ export const SafetySupervisorView: React.FC<SafetySupervisorViewProps> = ({
         </div>
 
         {/* CRC-8 Health */}
-        <div className="bg-[#121216] p-4 rounded-xl border border-[#23232B] space-y-1">
+        <div className="bg-[#1E1E21] p-4 rounded-xl border border-[#36363B] space-y-1">
           <div className="flex items-center justify-between text-slate-400 text-xs font-mono">
             <span>CRC-8 PASS RATE</span>
             <CheckCircle2 className="w-4 h-4 text-emerald-400" />
@@ -171,7 +171,7 @@ export const SafetySupervisorView: React.FC<SafetySupervisorViewProps> = ({
         </div>
 
         {/* Angular Rate Governor */}
-        <div className="bg-[#121216] p-4 rounded-xl border border-[#23232B] space-y-1">
+        <div className="bg-[#1E1E21] p-4 rounded-xl border border-[#36363B] space-y-1">
           <div className="flex items-center justify-between text-slate-400 text-xs font-mono">
             <span>RATE GOVERNOR</span>
             <ShieldCheck className="w-4 h-4 text-opred" />
@@ -185,7 +185,7 @@ export const SafetySupervisorView: React.FC<SafetySupervisorViewProps> = ({
         </div>
 
         {/* Total Verified Frames */}
-        <div className="bg-[#121216] p-4 rounded-xl border border-[#23232B] space-y-1">
+        <div className="bg-[#1E1E21] p-4 rounded-xl border border-[#36363B] space-y-1">
           <div className="flex items-center justify-between text-slate-400 text-xs font-mono">
             <span>TOTAL FRAMES</span>
             <Cpu className="w-4 h-4 text-opred" />
@@ -200,7 +200,7 @@ export const SafetySupervisorView: React.FC<SafetySupervisorViewProps> = ({
       </div>
 
       {/* Clinical Fault Injection Test Suite */}
-      <div className="bg-[#121216] p-6 rounded-2xl border border-[#23232B] space-y-4">
+      <div className="bg-[#1E1E21] p-6 rounded-2xl border border-[#36363B] space-y-4">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-sm font-bold text-white uppercase tracking-wider font-mono flex items-center gap-2">
@@ -218,7 +218,7 @@ export const SafetySupervisorView: React.FC<SafetySupervisorViewProps> = ({
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Fault 1: CRC-8 Checksum Corruption */}
-          <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#23232B] space-y-3 flex flex-col justify-between">
+          <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#36363B] space-y-3 flex flex-col justify-between">
             <div>
               <div className="text-xs font-bold text-white font-mono flex items-center gap-1.5">
                 <span className="text-opred">01.</span> Corrupt CRC-8
@@ -236,7 +236,7 @@ export const SafetySupervisorView: React.FC<SafetySupervisorViewProps> = ({
           </div>
 
           {/* Fault 2: Out of Order Sequence */}
-          <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#23232B] space-y-3 flex flex-col justify-between">
+          <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#36363B] space-y-3 flex flex-col justify-between">
             <div>
               <div className="text-xs font-bold text-white font-mono flex items-center gap-1.5">
                 <span className="text-opred">02.</span> Duplicate / Skewed SEQ
@@ -254,7 +254,7 @@ export const SafetySupervisorView: React.FC<SafetySupervisorViewProps> = ({
           </div>
 
           {/* Fault 3: Angular Rate Surge */}
-          <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#23232B] space-y-3 flex flex-col justify-between">
+          <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#36363B] space-y-3 flex flex-col justify-between">
             <div>
               <div className="text-xs font-bold text-white font-mono flex items-center gap-1.5">
                 <span className="text-opred">03.</span> Angular Rate Surge

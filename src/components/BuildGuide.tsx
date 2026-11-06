@@ -41,7 +41,7 @@ export const BuildGuide: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Top Banner */}
-      <div className="bg-[#101014] p-5 rounded-2xl border border-[#23232B] flex flex-wrap items-center justify-between gap-4">
+      <div className="bg-[#101014] p-5 rounded-2xl border border-[#36363B] flex flex-wrap items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-opred" />
@@ -61,10 +61,10 @@ export const BuildGuide: React.FC = () => {
       {/* Guide Accordion Sections */}
       <div className="space-y-4">
         {/* SECTION 1: BILL OF MATERIALS (BOM) */}
-        <div className="bg-[#121216] rounded-2xl border border-[#23232B] overflow-hidden">
+        <div className="bg-[#1E1E21] rounded-2xl border border-[#36363B] overflow-hidden">
           <button
             onClick={() => toggleSection('bom')}
-            className="w-full px-6 py-4 flex items-center justify-between bg-[#15151B] hover:bg-[#1A1A22] transition-colors text-left"
+            className="w-full px-6 py-4 flex items-center justify-between bg-[#15151B] hover:bg-[#2C2C30] transition-colors text-left"
           >
             <div className="flex items-center gap-3">
               <span className="w-6 h-6 rounded-full bg-opred/20 text-opred border border-opred/40 flex items-center justify-center font-mono text-xs font-bold">
@@ -145,7 +145,7 @@ export const BuildGuide: React.FC = () => {
                 </table>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#23232B] space-y-1">
+              <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#36363B] space-y-1">
                 <span className="text-white font-bold">Supervisory Hardware:</span>
                 <p className="text-slate-400">
                   Base Station links to an <span className="text-opred font-semibold">ARIES v3.0 Development Board</span> (powered by CDAC indigenous VEGA ET1031 RISC-V SoC). The ARIES board acts as an air-gapped critical supervisor and is reusable across surgical theaters.
@@ -156,10 +156,10 @@ export const BuildGuide: React.FC = () => {
         </div>
 
         {/* SECTION 2: CIRCUIT SCHEMATICS & PINOUT */}
-        <div className="bg-[#121216] rounded-2xl border border-[#23232B] overflow-hidden">
+        <div className="bg-[#1E1E21] rounded-2xl border border-[#36363B] overflow-hidden">
           <button
             onClick={() => toggleSection('wiring')}
-            className="w-full px-6 py-4 flex items-center justify-between bg-[#15151B] hover:bg-[#1A1A22] transition-colors text-left"
+            className="w-full px-6 py-4 flex items-center justify-between bg-[#15151B] hover:bg-[#2C2C30] transition-colors text-left"
           >
             <div className="flex items-center gap-3">
               <span className="w-6 h-6 rounded-full bg-opred/20 text-opred border border-opred/40 flex items-center justify-center font-mono text-xs font-bold">
@@ -245,10 +245,10 @@ export const BuildGuide: React.FC = () => {
         </div>
 
         {/* SECTION 3: 3D ERGONOMIC STERILE ENCLOSURE */}
-        <div className="bg-[#121216] rounded-2xl border border-[#23232B] overflow-hidden">
+        <div className="bg-[#1E1E21] rounded-2xl border border-[#36363B] overflow-hidden">
           <button
             onClick={() => toggleSection('enclosure')}
-            className="w-full px-6 py-4 flex items-center justify-between bg-[#15151B] hover:bg-[#1A1A22] transition-colors text-left"
+            className="w-full px-6 py-4 flex items-center justify-between bg-[#15151B] hover:bg-[#2C2C30] transition-colors text-left"
           >
             <div className="flex items-center gap-3">
               <span className="w-6 h-6 rounded-full bg-opred/20 text-opred border border-opred/40 flex items-center justify-center font-mono text-xs font-bold">
@@ -268,7 +268,7 @@ export const BuildGuide: React.FC = () => {
 
           {expandedSections['enclosure'] && (
             <div className="p-6 space-y-4 text-xs font-mono text-slate-300">
-              <div className="p-4 rounded-xl bg-[#0D0D11] border border-[#23232B] space-y-2">
+              <div className="p-4 rounded-xl bg-[#0D0D11] border border-[#36363B] space-y-2">
                 <div className="text-white font-bold">Surgical Theater Placement:</div>
                 <p className="text-slate-400">
                   The band is positioned on the surgeon's non-dominant or dominant forearm approximately <strong>4 cm proximal to the ulnar styloid process</strong>. This placement isolates forearm pronation/supination (roll) and wrist extension/flexion (pitch) while minimizing unintentional finger suture twitch artifacts.
@@ -293,10 +293,10 @@ export const BuildGuide: React.FC = () => {
         </div>
 
         {/* SECTION 4: TOOLCHAIN SETUP & FLASHING */}
-        <div className="bg-[#121216] rounded-2xl border border-[#23232B] overflow-hidden">
+        <div className="bg-[#1E1E21] rounded-2xl border border-[#36363B] overflow-hidden">
           <button
             onClick={() => toggleSection('flashing')}
-            className="w-full px-6 py-4 flex items-center justify-between bg-[#15151B] hover:bg-[#1A1A22] transition-colors text-left"
+            className="w-full px-6 py-4 flex items-center justify-between bg-[#15151B] hover:bg-[#2C2C30] transition-colors text-left"
           >
             <div className="flex items-center gap-3">
               <span className="w-6 h-6 rounded-full bg-opred/20 text-opred border border-opred/40 flex items-center justify-center font-mono text-xs font-bold">
@@ -318,7 +318,7 @@ export const BuildGuide: React.FC = () => {
             <div className="p-6 space-y-4 text-xs font-mono text-slate-300">
               <div className="space-y-2">
                 <span className="text-white font-bold">1. Flash Edge Wristband (ESP32-C3):</span>
-                <div className="p-3 rounded-lg bg-[#09090C] border border-[#23232B] text-slate-300 space-y-1">
+                <div className="p-3 rounded-lg bg-[#09090C] border border-[#36363B] text-slate-300 space-y-1">
                   <p className="text-slate-500"># Using Arduino CLI or ESP-IDF:</p>
                   <p className="text-opred">arduino-cli compile --fqbn esp32:esp32:esp32c3 wristband_firmware.ino</p>
                   <p className="text-opred">arduino-cli upload -p /dev/tty.usbmodem1101 --fqbn esp32:esp32:esp32c3 wristband_firmware.ino</p>
@@ -327,7 +327,7 @@ export const BuildGuide: React.FC = () => {
 
               <div className="space-y-2">
                 <span className="text-white font-bold">2. Flash Base Station Receiver (ESP32-C3):</span>
-                <div className="p-3 rounded-lg bg-[#09090C] border border-[#23232B] text-slate-300 space-y-1">
+                <div className="p-3 rounded-lg bg-[#09090C] border border-[#36363B] text-slate-300 space-y-1">
                   <p className="text-opred">arduino-cli compile --fqbn esp32:esp32:esp32c3 base_station_rx.ino</p>
                   <p className="text-opred">arduino-cli upload -p /dev/tty.usbmodem1102 --fqbn esp32:esp32:esp32c3 base_station_rx.ino</p>
                 </div>
@@ -335,7 +335,7 @@ export const BuildGuide: React.FC = () => {
 
               <div className="space-y-2">
                 <span className="text-white font-bold">3. Flash ARIES v3.0 Board (VEGA ET1031 RISC-V):</span>
-                <div className="p-3 rounded-lg bg-[#09090C] border border-[#23232B] text-slate-300 space-y-1">
+                <div className="p-3 rounded-lg bg-[#09090C] border border-[#36363B] text-slate-300 space-y-1">
                   <p className="text-slate-500"># Using CDAC VEGA SDK GNU Toolchain:</p>
                   <p className="text-opred">riscv32-unknown-elf-gcc -O2 -march=rv32imac -mabi=ilp32 aries_safety_supervisor.c -o aries_safety.elf</p>
                   <p className="text-opred">openocd -f interface/ftdi.cfg -f target/vega_et1031.cfg -c "program aries_safety.elf verify reset exit"</p>
@@ -346,10 +346,10 @@ export const BuildGuide: React.FC = () => {
         </div>
 
         {/* SECTION 5: CLINICAL SOP */}
-        <div className="bg-[#121216] rounded-2xl border border-[#23232B] overflow-hidden">
+        <div className="bg-[#1E1E21] rounded-2xl border border-[#36363B] overflow-hidden">
           <button
             onClick={() => toggleSection('clinical_sop')}
-            className="w-full px-6 py-4 flex items-center justify-between bg-[#15151B] hover:bg-[#1A1A22] transition-colors text-left"
+            className="w-full px-6 py-4 flex items-center justify-between bg-[#15151B] hover:bg-[#2C2C30] transition-colors text-left"
           >
             <div className="flex items-center gap-3">
               <span className="w-6 h-6 rounded-full bg-opred/20 text-opred border border-opred/40 flex items-center justify-center font-mono text-xs font-bold">
@@ -370,7 +370,7 @@ export const BuildGuide: React.FC = () => {
           {expandedSections['clinical_sop'] && (
             <div className="p-6 space-y-4 text-xs font-mono text-slate-300">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#23232B] space-y-2">
+                <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#36363B] space-y-2">
                   <span className="text-white font-bold text-sm">SURGEON ACTION LEXICON:</span>
                   <div className="space-y-1.5 text-slate-400">
                     <div>
@@ -391,7 +391,7 @@ export const BuildGuide: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#23232B] space-y-2">
+                <div className="p-4 rounded-xl bg-[#0E0E12] border border-[#36363B] space-y-2">
                   <span className="text-white font-bold text-sm">SAFETY & ACCEPTANCE CRITERIA:</span>
                   <div className="space-y-1.5 text-slate-400">
                     <div className="flex items-center gap-2 text-emerald-400">

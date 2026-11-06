@@ -314,10 +314,10 @@ export const OrViewport3D: React.FC<OrViewport3DProps> = ({
   };
 
   return (
-    <div className="relative w-full h-[calc(100vh-140px)] min-h-[580px] bg-[#0A0A0C] rounded-2xl border border-[#23232B] overflow-hidden flex flex-col shadow-2xl">
+    <div className="relative w-full h-[calc(100vh-140px)] min-h-[580px] bg-[#18181A] rounded-2xl border border-[#36363B] overflow-hidden flex flex-col shadow-2xl">
       {/* Surgical OR Top HUD */}
       <div className="absolute top-4 left-4 z-20 flex flex-col gap-2">
-        <div className="bg-[#121216]/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-[#2A2A35] flex items-center gap-3 shadow-lg">
+        <div className="bg-[#1E1E21]/90 backdrop-blur-md px-3.5 py-2 rounded-xl border border-[#36363B] flex items-center gap-3 shadow-lg">
           <div className="w-2.5 h-2.5 rounded-full bg-opred animate-pulse"></div>
           <div>
             <div className="text-[10px] text-slate-400 uppercase tracking-widest font-mono">Target Scan</div>
@@ -331,7 +331,7 @@ export const OrViewport3D: React.FC<OrViewport3DProps> = ({
         </div>
 
         {/* Live Coordinate / Kinematics Readout */}
-        <div className="bg-[#121216]/85 backdrop-blur-md px-3 py-2 rounded-xl border border-[#23232B] font-mono text-xs space-y-1">
+        <div className="bg-[#1E1E21]/85 backdrop-blur-md px-3 py-2 rounded-xl border border-[#36363B] font-mono text-xs space-y-1">
           <div className="flex items-center justify-between gap-4 text-slate-400">
             <span>PITCH (θX):</span>
             <span className="text-white font-semibold">
@@ -348,7 +348,7 @@ export const OrViewport3D: React.FC<OrViewport3DProps> = ({
             <span>DISTANCE:</span>
             <span className="text-opred font-semibold">{zoomLevel.current.toFixed(2)}x</span>
           </div>
-          <div className="flex items-center justify-between gap-4 text-slate-400 pt-1 border-t border-[#23232B]">
+          <div className="flex items-center justify-between gap-4 text-slate-400 pt-1 border-t border-[#36363B]">
             <span>AXIS LOCK:</span>
             <span className="text-emerald-400 font-bold">{telemetry.dominantAxis}</span>
           </div>
@@ -386,7 +386,7 @@ export const OrViewport3D: React.FC<OrViewport3DProps> = ({
           className={`p-2 rounded-xl border backdrop-blur-md transition-all ${
             showBrainEnvelope
               ? 'bg-[#181820]/90 text-white border-[#3A3A48]'
-              : 'bg-[#101014]/60 text-slate-500 border-[#23232B]'
+              : 'bg-[#101014]/60 text-slate-500 border-[#36363B]'
           }`}
           title="Toggle Cranial Cortical Envelope"
         >
@@ -396,7 +396,7 @@ export const OrViewport3D: React.FC<OrViewport3DProps> = ({
         {/* Reset Viewport */}
         <button
           onClick={resetViewport}
-          className="p-2 rounded-xl bg-[#14141A]/80 hover:bg-[#202028] text-slate-300 hover:text-white border border-[#2A2A35] backdrop-blur-md transition-colors"
+          className="p-2 rounded-xl bg-[#14141A]/80 hover:bg-[#2C2C30] text-slate-300 hover:text-white border border-[#36363B] backdrop-blur-md transition-colors"
           title="Reset Camera Orientation"
         >
           <RotateCcw className="w-4 h-4" />
@@ -424,7 +424,7 @@ export const OrViewport3D: React.FC<OrViewport3DProps> = ({
       {/* Sterile Lock Overlay when System is LOCKED or FAULT */}
       {telemetry.systemState === 'LOCKED' && (
         <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px] z-30 flex items-center justify-center pointer-events-none transition-all">
-          <div className="bg-[#121218]/95 border border-[#2E2E38] rounded-2xl p-6 max-w-md text-center shadow-2xl space-y-3">
+          <div className="bg-[#121218]/95 border border-[#36363B] rounded-2xl p-6 max-w-md text-center shadow-2xl space-y-3">
             <div className="w-12 h-12 rounded-full bg-[#1C1C24] border border-slate-700 mx-auto flex items-center justify-center text-slate-300">
               <Lock className="w-6 h-6" />
             </div>
@@ -460,7 +460,7 @@ export const OrViewport3D: React.FC<OrViewport3DProps> = ({
       )}
 
       {/* Bottom Interactive Gesture Simulation Controller Pad */}
-      <div className="absolute bottom-3 left-4 right-4 z-20 bg-[#101014]/90 backdrop-blur-md p-3 rounded-xl border border-[#23232B] flex flex-wrap items-center justify-between gap-3 shadow-xl">
+      <div className="absolute bottom-3 left-4 right-4 z-20 bg-[#101014]/90 backdrop-blur-md p-3 rounded-xl border border-[#36363B] flex flex-wrap items-center justify-between gap-3 shadow-xl">
         <div className="flex items-center gap-2">
           <div className="text-[11px] font-mono text-slate-400 uppercase flex items-center gap-1.5">
             <Zap className="w-3.5 h-3.5 text-opred" />

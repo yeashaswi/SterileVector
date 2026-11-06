@@ -39,7 +39,7 @@ export const CodebaseViewer: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Top Banner */}
-      <div className="bg-[#101014] p-5 rounded-2xl border border-[#23232B] flex flex-wrap items-center justify-between gap-4">
+      <div className="bg-[#101014] p-5 rounded-2xl border border-[#36363B] flex flex-wrap items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
             <FileCode2 className="w-5 h-5 text-opred" />
@@ -55,7 +55,7 @@ export const CodebaseViewer: React.FC = () => {
         <div className="flex items-center gap-2">
           <button
             onClick={handleCopy}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#1A1A22] hover:bg-[#252530] text-slate-200 border border-[#2F2F3D] text-xs font-mono transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#2C2C30] hover:bg-[#252530] text-slate-200 border border-[#2F2F3D] text-xs font-mono transition-colors"
           >
             {copied ? (
               <>
@@ -119,7 +119,7 @@ export const CodebaseViewer: React.FC = () => {
           </div>
 
           {/* Architecture Summary Box */}
-          <div className="p-4 rounded-xl bg-[#0D0D10] border border-[#23232B] space-y-2.5">
+          <div className="p-4 rounded-xl bg-[#0D0D10] border border-[#36363B] space-y-2.5">
             <div className="text-xs font-mono font-bold text-white flex items-center gap-2">
               <Cpu className="w-4 h-4 text-opred" />
               <span>Compilation & Toolchain:</span>
@@ -134,9 +134,9 @@ export const CodebaseViewer: React.FC = () => {
         </div>
 
         {/* Right Code Display */}
-        <div className="lg:col-span-8 bg-[#0C0C10] rounded-2xl border border-[#23232B] overflow-hidden flex flex-col shadow-2xl">
+        <div className="lg:col-span-8 bg-[#0C0C10] rounded-2xl border border-[#36363B] overflow-hidden flex flex-col shadow-2xl">
           {/* File Header Bar */}
-          <div className="bg-[#121218] px-4 py-2.5 border-b border-[#23232B] flex items-center justify-between">
+          <div className="bg-[#121218] px-4 py-2.5 border-b border-[#36363B] flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-xs font-mono text-slate-300 font-bold">{activeFile.name}</span>
               <span className="text-[10px] font-mono text-slate-500">

@@ -51,7 +51,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-[#101014] p-5 rounded-2xl border border-[#23232B] flex flex-wrap items-center justify-between gap-4">
+      <div className="bg-[#101014] p-5 rounded-2xl border border-[#36363B] flex flex-wrap items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
             <h2 className="text-lg font-bold text-white tracking-wide">
@@ -72,7 +72,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
             setInteractiveRoll(0);
             onResetOrigin();
           }}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#1A1A22] hover:bg-[#252530] text-slate-200 border border-[#2F2F3D] text-xs font-mono transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#2C2C30] hover:bg-[#252530] text-slate-200 border border-[#2F2F3D] text-xs font-mono transition-colors"
         >
           <RotateCw className="w-3.5 h-3.5 text-opred" />
           <span>Zero-Point Calibration</span>
@@ -84,7 +84,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
         {/* COLUMN 1: KINEMATICS & TREMOR DEADZONE HUD */}
         <div className="space-y-6">
           {/* Tilt Kinematics & Dead-Zone Card */}
-          <div className="bg-[#121216] p-5 rounded-2xl border border-[#23232B] space-y-4">
+          <div className="bg-[#1E1E21] p-5 rounded-2xl border border-[#36363B] space-y-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Sliders className="w-4 h-4 text-opred" />
@@ -103,7 +103,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
                 <span className="text-slate-400">PITCH ANGLE (θX):</span>
                 <span className="text-white font-bold">{telemetry.pitchDeg.toFixed(1)}°</span>
               </div>
-              <div className="relative h-6 bg-[#09090C] rounded-lg border border-[#23232B] overflow-hidden flex items-center justify-center">
+              <div className="relative h-6 bg-[#09090C] rounded-lg border border-[#36363B] overflow-hidden flex items-center justify-center">
                 {/* Center Deadzone Highlight (±3 deg out of ±15 deg scale = 20% width) */}
                 <div className="absolute w-[20%] h-full bg-emerald-500/15 border-x border-emerald-500/40 flex items-center justify-center">
                   <span className="text-[9px] font-mono text-emerald-400 font-semibold">DEADZONE (±3°)</span>
@@ -131,7 +131,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
                 <span className="text-slate-400">ROLL ANGLE (θY):</span>
                 <span className="text-white font-bold">{telemetry.rollDeg.toFixed(1)}°</span>
               </div>
-              <div className="relative h-6 bg-[#09090C] rounded-lg border border-[#23232B] overflow-hidden flex items-center justify-center">
+              <div className="relative h-6 bg-[#09090C] rounded-lg border border-[#36363B] overflow-hidden flex items-center justify-center">
                 <div className="absolute w-[20%] h-full bg-emerald-500/15 border-x border-emerald-500/40 flex items-center justify-center">
                   <span className="text-[9px] font-mono text-emerald-400 font-semibold">DEADZONE (±3°)</span>
                 </div>
@@ -152,7 +152,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
             </div>
 
             {/* Dominant Axis Arbiter Card */}
-            <div className="p-3 rounded-xl bg-[#0C0C0F] border border-[#23232B] flex items-center justify-between">
+            <div className="p-3 rounded-xl bg-[#0C0C0F] border border-[#36363B] flex items-center justify-between">
               <div>
                 <div className="text-[10px] text-slate-400 uppercase font-mono">Dominant Axis Arbiter</div>
                 <div className="text-xs font-semibold text-white">
@@ -173,7 +173,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
             </div>
 
             {/* Interactive Pitch/Roll Sliders for Live Testing */}
-            <div className="pt-2 border-t border-[#23232B] space-y-3">
+            <div className="pt-2 border-t border-[#36363B] space-y-3">
               <div className="text-xs font-mono text-slate-300 font-semibold flex items-center gap-1.5">
                 <Zap className="w-3.5 h-3.5 text-opred" />
                 <span>Simulate Forearm Tilt Angles:</span>
@@ -212,7 +212,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
           </div>
 
           {/* Haptic Alert State & Actuation */}
-          <div className="bg-[#121216] p-5 rounded-2xl border border-[#23232B] space-y-3">
+          <div className="bg-[#1E1E21] p-5 rounded-2xl border border-[#36363B] space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Vibrate className="w-4 h-4 text-opred" />
@@ -265,7 +265,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
         {/* COLUMN 2: 1D-CNN AI CLASSIFIER & 12-BYTE PACKET */}
         <div className="space-y-6">
           {/* 1D-CNN Inference Radar */}
-          <div className="bg-[#121216] p-5 rounded-2xl border border-[#23232B] space-y-4">
+          <div className="bg-[#1E1E21] p-5 rounded-2xl border border-[#36363B] space-y-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Cpu className="w-4 h-4 text-opred" />
@@ -292,7 +292,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
                     {(telemetry.cnnConfidences.idle * 100).toFixed(1)}%
                   </span>
                 </div>
-                <div className="h-2 bg-[#0A0A0E] rounded-full overflow-hidden border border-[#23232B]">
+                <div className="h-2 bg-[#0A0A0E] rounded-full overflow-hidden border border-[#36363B]">
                   <div
                     className="h-full bg-slate-500 transition-all duration-150"
                     style={{ width: `${telemetry.cnnConfidences.idle * 100}%` }}
@@ -308,7 +308,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
                     {(telemetry.cnnConfidences.clutch * 100).toFixed(1)}%
                   </span>
                 </div>
-                <div className="h-2 bg-[#0A0A0E] rounded-full overflow-hidden border border-[#23232B]">
+                <div className="h-2 bg-[#0A0A0E] rounded-full overflow-hidden border border-[#36363B]">
                   <div
                     className="h-full bg-opred transition-all duration-150"
                     style={{ width: `${telemetry.cnnConfidences.clutch * 100}%` }}
@@ -324,7 +324,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
                     {(telemetry.cnnConfidences.rollFlick * 100).toFixed(1)}%
                   </span>
                 </div>
-                <div className="h-2 bg-[#0A0A0E] rounded-full overflow-hidden border border-[#23232B]">
+                <div className="h-2 bg-[#0A0A0E] rounded-full overflow-hidden border border-[#36363B]">
                   <div
                     className="h-full bg-opred transition-all duration-150"
                     style={{ width: `${telemetry.cnnConfidences.rollFlick * 100}%` }}
@@ -340,7 +340,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
                     {(telemetry.cnnConfidences.tap * 100).toFixed(1)}%
                   </span>
                 </div>
-                <div className="h-2 bg-[#0A0A0E] rounded-full overflow-hidden border border-[#23232B]">
+                <div className="h-2 bg-[#0A0A0E] rounded-full overflow-hidden border border-[#36363B]">
                   <div
                     className="h-full bg-opred transition-all duration-150"
                     style={{ width: `${telemetry.cnnConfidences.tap * 100}%` }}
@@ -350,7 +350,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
             </div>
 
             {/* Quick Trigger Buttons */}
-            <div className="pt-2 border-t border-[#23232B] flex flex-wrap gap-2">
+            <div className="pt-2 border-t border-[#36363B] flex flex-wrap gap-2">
               <button
                 onClick={onClutchHold}
                 className="px-2.5 py-1 rounded-lg bg-[#181820] hover:bg-[#22222E] text-slate-200 text-xs font-mono border border-slate-700"
@@ -379,7 +379,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
           </div>
 
           {/* 12-Byte Binary Telemetry Protocol Inspector */}
-          <div className="bg-[#121216] p-5 rounded-2xl border border-[#23232B] space-y-4">
+          <div className="bg-[#1E1E21] p-5 rounded-2xl border border-[#36363B] space-y-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Binary className="w-4 h-4 text-opred" />
@@ -393,7 +393,7 @@ export const GestureTestbed: React.FC<GestureTestbedProps> = ({
             </div>
 
             {/* Raw Hex Stream Display */}
-            <div className="p-3 bg-[#09090C] rounded-xl border border-[#23232B] font-mono text-sm tracking-wider text-opred flex flex-wrap gap-2 select-all">
+            <div className="p-3 bg-[#09090C] rounded-xl border border-[#36363B] font-mono text-sm tracking-wider text-opred flex flex-wrap gap-2 select-all">
               {telemetry.rawHex.split(' ').map((byteHex, i) => (
                 <span
                   key={i}
